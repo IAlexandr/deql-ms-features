@@ -9,6 +9,7 @@ const { debug, time } = logger('project.dependencies');
 
 export const dependencies = async function({ app }) {
   const initialized = time('initializing');
+
   const db = await init({
     dbConfig: options.config.sequelize,
     NODE_ENV: options.config.NODE_ENV,
